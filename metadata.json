@@ -1,0 +1,6 @@
+{
+  "name": "MSA — Multimodal Stress Analyser",
+  "description": "Clinical-grade multimodal stress intelligence, decoded on-device in real time. Built in Australia with zero cloud data retention.",
+  "requestFramePermissions": ["camera", "microphone"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -1,0 +1,65 @@
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Playfair Display", Georgia, serif;
+  --font-sans: "Plus Jakarta Sans", system-ui, -apple-system, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+
+  --color-msa-navy: #1F2A38;
+  --color-msa-steel: #5A6C85;
+  --color-msa-cloud: #E8EEF5;
+  --color-msa-oat: #F1EFEB;
+  --color-msa-white: #FFFFFF;
+}
+
+@layer base {
+  html {
+    font-family: var(--font-sans);
+    color: #1F2A38;
+    background-color: #FFFFFF;
+  }
+
+  h1, h2, h3, .text-balance {
+    text-wrap: balance;
+  }
+}
+
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Smooth GPU flashlight gradient utilities */
+.hero-flashlight-reveal {
+  -webkit-mask-image: radial-gradient(
+    clamp(240px, 58vw, 650px) circle at var(--mouse-x, 50%) var(--mouse-y, 40%),
+    rgba(0, 0, 0, 1) 0%,
+    rgba(0, 0, 0, 0.78) 28%,
+    rgba(0, 0, 0, 0.25) 56%,
+    rgba(0, 0, 0, 0) 82%
+  );
+  mask-image: radial-gradient(
+    clamp(240px, 58vw, 650px) circle at var(--mouse-x, 50%) var(--mouse-y, 40%),
+    rgba(0, 0, 0, 1) 0%,
+    rgba(0, 0, 0, 0.78) 28%,
+    rgba(0, 0, 0, 0.25) 56%,
+    rgba(0, 0, 0, 0) 82%
+  );
+}
+
+.hero-specular-border {
+  background: radial-gradient(
+    clamp(200px, 65vw, 420px) circle at var(--card-mouse-x, 50%) var(--card-mouse-y, 24%),
+    rgba(232, 238, 245, 0.34),
+    rgba(90, 108, 133, 0.14) 50%,
+    rgba(232, 238, 245, 0.08) 100%
+  );
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
